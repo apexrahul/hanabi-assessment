@@ -4,7 +4,7 @@
     ".prettierrc": "jsonc",
     ".eslintignore": "ignore"
   },
-  
+
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -18,7 +18,7 @@
 
   "search.exclude": {
     ".git": true,
-    ".eslintcache": true,
+    ".eslintcache": false,
     ".erb/dll": true,
     "release/{build,app/dist}": true,
     "node_modules": true,
