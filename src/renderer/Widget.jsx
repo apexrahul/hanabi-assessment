@@ -1,21 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Widget = () => {
+function Widget() {
+  const [openTab, getOpenTab] = useState([1]);
 
-  function clickAddNew (){
-    console.log("called")
+  function getNewTab() {
+    return (
+      <div>
+        <p>New Tab</p>
+      </div>
+    );
+  }
+
+  function clickAddNew() {
+    getOpenTab([...openTab, 1]);
+    console.log(openTab);
   }
 
   return (
     <div>
-      <div>
-        <p>New Tab</p>
-      </div>
+      {openTab.map((tab) => getNewTab())}
       <div>
         <p onClick={clickAddNew}>+</p>
+        <p onClick={removeTab}>-</p>
       </div>
     </div>
-  )
+  );
 }
 
-export default Widget
+export default Widget;
